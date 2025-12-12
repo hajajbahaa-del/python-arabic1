@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اليوم الأول - تعلم بايثون</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Tajawal', Arial, sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #000000 100%);
+            padding: 40px 20px;
+            line-height: 1.8;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #0d39ff 0%, #000000 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .bismillah {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .intro {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .author {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(37, 37, 37, 0.3);
+        }
+        
+        .author p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        h1 {
+            color: #3654da;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #000000;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 30px 0 20px 0;
+            padding-right: 15px;
+            border-right: 5px solid #4b69ed;
+        }
+        
+        .description {
+            background: #f8f9ff;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-right: 4px solid #667eea;
+        }
+        
+        .steps {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid #e0e7ff;
+        }
+        
+        .steps ol {
+            padding-right: 20px;
+        }
+        
+        .steps li {
+            margin: 12px 0;
+            font-size: 17px;
+            color: #444;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #20253a 0%, #0030db 100%);
+            color: white;
+            padding: 15px;
+            text-align: right;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e7ff;
+            font-size: 16px;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        tr:hover {
+            background: #f8f9ff;
+        }
+        
+        .code {
+            background: #2d3748;
+            color: #68d391;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 15px;
+        }
+        
+        .example-box {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            line-height: 1.6;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .motivation {
+            background: linear-gradient(135deg, #000000 0%, #1a44ff 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .motivation-text {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.6;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .star {
+            font-size: 48px;
+            display: inline-block;
+            animation: rotate 3s linear infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.02);
+            }
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+            
+            .motivation {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="bismillah">بسم الله الرحمن الرحيم</div>
+            <div class="intro">
+                هذا المستند مخصص لتعليم أساسيات لغة بايثون خطوة بخطوة للمبتدئين،<br>
+                وبأسلوب عربي بسيط وواضح، بدون الحاجة لأي خبرة سابقة في البرمجة أو اللغة الإنجليزية.
+            </div>
+            <div class="author">
+                <p><strong>إعداد: المهندس بهاء</strong></p>
+                <p>صفحة الانستغرام: btec_zone.2_008</p>
+            </div>
+        </div>
+        
+        <div class="content">
+            <h1>اليوم الأول لتعلم البرمجة بلغة بايثون</h1>
+            
+            <div class="description">
+                في هذا اليوم سنبدأ من الصفر تمامًا. إذا كنت لا تعرف ما هي البرمجة أو كيف تكتب كود، لا تقلق، كل شيء مشروح بالعربي وبأمثلة بسيطة.
+            </div>
+            
+            <h2>📌 كيف تستخدم هذا الدرس؟</h2>
+            <div class="steps">
+                <ol>
+                    <li>اقرأ الشرح بهدوء ولا تستعجل.</li>
+                    <li>انسخ الأمثلة وجرب كتابتها بنفسك.</li>
+                    <li>لا تحفظ، حاول تفهم الفكرة فقط.</li>
+                    <li>إذا ما فهمت من أول مرة، عادي جدًا.</li>
+                </ol>
+            </div>
+            
+            <h2>📌 الكلمات الأساسية في بايثون</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>الكلمة</th>
+                        <th>الشرح</th>
+                        <th>مثال</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="code">print</span></td>
+                        <td>تستخدم لعرض شيء على الشاشة</td>
+                        <td><span class="code">print("مرحبا")</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">المتغير</span></td>
+                        <td>نخزن فيه قيمة مثل اسم أو رقم</td>
+                        <td><span class="code">name = "Ali"</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">=</span></td>
+                        <td>لوضع قيمة داخل متغير</td>
+                        <td><span class="code">age = 20</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">#</span></td>
+                        <td>تعليق للشرح ولا يتم تشغيله</td>
+                        <td><span class="code"># هذا تعليق</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>📘 شرح مبسط بالأمثلة</h2>
+            <div style="margin: 20px 0;">
+                <strong style="color: #667eea; font-size: 18px;">شرح مكثف:</strong>
+            </div>
+            <div class="example-box">
+                print("مرحبا")
+            </div>
+            <div class="description">
+                هذا السطر يعني: اطبع كلمة (مرحبا) على الشاشة.<br>
+                أي شيء تضعه بين علامتي " " سيظهر كما هو.
+            </div>
+        </div>
+        
+        <div class="motivation">
+            <div class="motivation-text">
+                إنت قادر تتعلم وتنجح،<br>
+                خطوة صغيرة اليوم تصنع فرق كبير بكرة
+                <span class="star">🌟</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
