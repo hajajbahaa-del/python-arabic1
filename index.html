@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تعلم بايثون مع مهندس بهاء</title>
+    <title>تعلم برمجة مع مهندس بهاء</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
         
@@ -15,7 +15,7 @@
         
         body {
             font-family: 'Tajawal', Arial, sans-serif;
-            background: linear-gradient(135deg, #000000 0%, #000000 100%);
+            background: linear-gradient(135deg, #000000 0%, #1a1a2e 100%);
             padding: 40px 20px;
             line-height: 1.8;
         }
@@ -52,7 +52,7 @@
         .author {
             margin-top: 25px;
             padding-top: 20px;
-            border-top: 2px solid rgba(37, 37, 37, 0.3);
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
         }
         
         .author p {
@@ -65,7 +65,7 @@
         }
         
         h1 {
-            color: #3654da;
+            color: #0d39ff;
             font-size: 32px;
             font-weight: 800;
             margin-bottom: 30px;
@@ -78,7 +78,18 @@
             font-weight: 700;
             margin: 30px 0 20px 0;
             padding-right: 15px;
-            border-right: 5px solid #4b69ed;
+            border-right: 5px solid #0d39ff;
+        }
+        
+        h3 {
+            color: #0d39ff;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 25px 0 15px 0;
+            padding: 15px;
+            background: #f0f4ff;
+            border-radius: 8px;
+            border-right: 4px solid #0d39ff;
         }
         
         .description {
@@ -86,7 +97,127 @@
             padding: 25px;
             border-radius: 12px;
             margin-bottom: 25px;
-            border-right: 4px solid #667eea;
+            border-right: 4px solid #0d39ff;
+        }
+        
+        .setup-intro {
+            background: linear-gradient(135deg, #0d39ff 0%, #1a44ff 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+            box-shadow: 0 8px 20px rgba(13, 57, 255, 0.3);
+        }
+        
+        .learning-goals {
+            background: #fff8e1;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-right: 4px solid #ffa726;
+        }
+        
+        .learning-goals ul {
+            list-style: none;
+            padding-right: 0;
+        }
+        
+        .learning-goals li {
+            padding: 10px 0;
+            font-size: 17px;
+            color: #333;
+        }
+        
+        .learning-goals li:before {
+            content: "✓ ";
+            color: #ffa726;
+            font-weight: bold;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        
+        .editor-card {
+            background: white;
+            border: 2px solid #e3f2fd;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .editor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(13, 57, 255, 0.2);
+        }
+        
+        .editor-title {
+            font-size: 22px;
+            font-weight: 800;
+            color: #0d39ff;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .editor-features {
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .editor-features p {
+            margin: 8px 0;
+            padding-right: 20px;
+            font-size: 16px;
+        }
+        
+        .download-steps {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .download-steps h4 {
+            color: #2e7d32;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+        
+        .download-steps ol {
+            padding-right: 20px;
+        }
+        
+        .download-steps li {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-right: 4px solid #ff9800;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .warning-box strong {
+            color: #e65100;
+            font-size: 18px;
+        }
+        
+        .info-box {
+            background: #e3f2fd;
+            border-right: 4px solid #2196f3;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
         }
         
         .steps {
@@ -117,7 +248,7 @@
         }
         
         th {
-            background: linear-gradient(135deg, #20253a 0%, #0030db 100%);
+            background: linear-gradient(135deg, #0d39ff 0%, #1a44ff 100%);
             color: white;
             padding: 15px;
             text-align: right;
@@ -184,6 +315,26 @@
             animation: rotate 3s linear infinite;
         }
         
+        .student-note {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .student-note h4 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .student-note p {
+            margin: 8px 0;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
         @keyframes pulse {
             0%, 100% {
                 transform: scale(1);
@@ -233,7 +384,137 @@
         </div>
         
         <div class="content">
-            <h1>اليوم الأول لتعلم البرمجة بلغة بايثون</h1>
+            <!-- قسم التجهيز -->
+            <div class="setup-intro">
+                🚀 قبل ما نبلش بتعلم لغة بايثون لازم نجهز جهازنا صح<br>
+                التجهيز هذا راح يساعدنا نكتب الكود ونشغله بدون أي مشاكل
+            </div>
+            
+            <div class="learning-goals">
+                <h2>📌 في هذا الجزء راح نتعلم:</h2>
+                <ul>
+                    <li>🖥️ كيف ننزل محرر كود</li>
+                    <li>🐍 كيف ننزل لغة بايثون</li>
+                    <li>🔗 كيف نربط بايثون مع محرر الكود</li>
+                </ul>
+            </div>
+
+            <!-- تحميل محررات الكود -->
+            <h2>🖊️ أولاً: تحميل محرر الكود</h2>
+            <div class="description">
+                محرر الكود هو البرنامج اللي راح نكتب فيه أوامر بايثون ✍️<br>
+                <strong>بدونه ما بنقدر نبرمج!</strong><br><br>
+                راح نستخدم محررين مناسبين للطلاب 👇
+            </div>
+
+            <!-- المحرر الأول: VS Code -->
+            <div class="editor-card">
+                <div class="editor-title">💻 المحرر الأول: Visual Studio Code</div>
+                
+                <div class="editor-features">
+                    <p>⭐ واحد من أفضل محررات الكود بالعالم</p>
+                    <p>⭐ يستخدم لبرمجة بايثون ولغات كثير</p>
+                    <p>⭐ مناسب للتعلم والاحتراف</p>
+                </div>
+
+                <div class="download-steps">
+                    <h4>📥 طريقة التحميل:</h4>
+                    <ol>
+                        <li>🌐 ادخل على موقع Visual Studio Code</li>
+                        <li>⬇️ حمل النسخة المناسبة لنظام جهازك</li>
+                        <li>🛠️ ثبت البرنامج زي أي برنامج عادي</li>
+                    </ol>
+                </div>
+
+                <div class="info-box">
+                    <strong>🧠 ماذا يعمل هذا المحرر؟</strong>
+                    <p>✍️ نكتب فيه كود بايثون</p>
+                    <p>❌ يوضح الأخطاء</p>
+                    <p>📂 ينظم الملفات</p>
+                    <p>▶️ يشغل الكود بسهولة</p>
+                </div>
+            </div>
+
+            <!-- المحرر الثاني: IDLE -->
+            <div class="editor-card">
+                <div class="editor-title">🪶 المحرر الثاني: Python IDLE</div>
+                
+                <div class="editor-features">
+                    <p>⚡ محرر خفيف وسهل</p>
+                    <p>⚡ مناسب للأجهزة الضعيفة</p>
+                    <p>⚡ ممتاز للمبتدئين</p>
+                </div>
+
+                <div class="info-box">
+                    <strong>🧠 ماذا يعمل هذا المحرر؟</strong>
+                    <p>✍️ نكتب فيه كود بايثون</p>
+                    <p>▶️ نشغل الأوامر مباشرة</p>
+                    <p>🧪 نستخدمه للتجارب السريعة</p>
+                </div>
+
+                <div class="info-box">
+                    <strong>ℹ️ ملاحظة:</strong> هذا المحرر يثبت تلقائياً مع لغة بايثون ✔️
+                </div>
+            </div>
+
+            <!-- تحميل بايثون -->
+            <h2>🐍 ثانياً: تحميل لغة بايثون</h2>
+            <div class="description">
+                لغة بايثون هي اللغة اللي راح نبرمج فيها<br>
+                <strong>لازم تكون مثبتة على الجهاز عشان الكود يشتغل ⚙️</strong>
+            </div>
+
+            <div class="download-steps">
+                <h4>📥 طريقة التحميل:</h4>
+                <ol>
+                    <li>🌐 ادخل على الموقع الرسمي للغة بايثون</li>
+                    <li>⬇️ حمل آخر نسخة</li>
+                    <li>🛠️ ابدأ التثبيت</li>
+                </ol>
+            </div>
+
+            <div class="warning-box">
+                <strong>⚠️ مهم جداً أثناء التثبيت:</strong><br><br>
+                فعّل الخيار: <span class="code">✅ Add Python to PATH</span><br><br>
+                هذا الخيار ضروري عشان يشتغل بايثون مع محرر الكود!
+            </div>
+
+            <!-- ربط بايثون مع VS Code -->
+            <h2>🔗 ثالثاً: ربط بايثون مع Visual Studio Code</h2>
+            <div class="description">
+                بعد ما نثبت بايثون و Visual Studio Code<br>
+                <strong>لازم نربطهم مع بعض 🔌</strong>
+            </div>
+
+            <div class="steps">
+                <ol>
+                    <li>🧩 افتح Visual Studio Code</li>
+                    <li>🧩 ادخل على الإضافات (Extensions)</li>
+                    <li>🧩 ابحث عن <span class="code">Python</span></li>
+                    <li>🧩 ثبت الإضافة الرسمية من Microsoft</li>
+                </ol>
+            </div>
+
+            <h3>📂 اختبار التثبيت:</h3>
+            <div class="steps">
+                <ol>
+                    <li>➕ أنشئ ملف جديد</li>
+                    <li>💾 احفظه باسم ينتهي بـ <span class="code">.py</span> مثال: <span class="code">test.py</span></li>
+                    <li>🧪 اكتب أول كود: <span class="code">print("Hello Python")</span></li>
+                    <li>▶️ اضغط تشغيل (Run)</li>
+                    <li>🎉 إذا ظهر النص، معناها كل شي تمام!</li>
+                </ol>
+            </div>
+
+            <div class="student-note">
+                <h4>👨‍🎓 ملاحظة للطالب:</h4>
+                <p>🪶 إذا جهازك ضعيف، استخدم <strong>Python IDLE</strong></p>
+                <p>💻 إذا بدك تتعلم بشكل احترافي، استخدم <strong>Visual Studio Code</strong></p>
+                <p>✅ الاثنين ممتازين لتعلم بايثون</p>
+            </div>
+
+            <!-- بداية اليوم الأول -->
+            <h1 style="margin-top: 60px;">اليوم الأول لتعلم البرمجة بلغة بايثون</h1>
             
             <div class="description">
                 في هذا اليوم سنبدأ من الصفر تمامًا. إذا كنت لا تعرف ما هي البرمجة أو كيف تكتب كود، لا تقلق، كل شيء مشروح بالعربي وبأمثلة بسيطة.
@@ -284,7 +565,7 @@
             
             <h2>📘 شرح مبسط بالأمثلة</h2>
             <div style="margin: 20px 0;">
-                <strong style="color: #667eea; font-size: 18px;">شرح مكثف:</strong>
+                <strong style="color: #0d39ff; font-size: 18px;">شرح مكثف:</strong>
             </div>
             <div class="example-box">
                 print("مرحبا")
@@ -305,4 +586,3 @@
     </div>
 </body>
 </html>
-
