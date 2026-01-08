@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ lesson.title }}{% endblock %}
+{% block content %}
+<div class="lesson-wrap">
+  <div class="lesson-header">
+    <div class="bismillah">بسم الله الرحمن الرحيم</div>
+    <h1 class="lesson-title">{{ lesson.title }}</h1>
+    <div class="muted">الكورس: {{ lesson.course.title }}</div>
+  </div>
+
+  <div class="lesson-body">
+    {{ lesson.content_html | safe }}
+  </div>
+</div>
+{% endblock %}

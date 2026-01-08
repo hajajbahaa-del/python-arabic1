@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}الحقول{% endblock %}
+{% block content %}
+<div class="card">
+  <h1 class="h1">الحقول</h1>
+
+  <form method="post" class="form">
+    <label>اسم الحقل</label>
+    <input name="name" placeholder="Python / Web / AI..." required>
+    <button class="btn" type="submit">إضافة</button>
+  </form>
+
+  <div class="list">
+    {% for f in fields %}
+      <div class="item">{{ f.name }}</div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

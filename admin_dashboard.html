@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}لوحة التحكم{% endblock %}
+{% block content %}
+<div class="grid">
+  <div class="card"><div class="big">{{fields}}</div><div>الحقول</div></div>
+  <div class="card"><div class="big">{{courses}}</div><div>الكورسات</div></div>
+  <div class="card"><div class="big">{{lessons}}</div><div>الدروس</div></div>
+  <div class="card"><div class="big">{{docs}}</div><div>الملفات</div></div>
+</div>
+
+<div class="card">
+  <h2 class="h2">إدارة المحتوى</h2>
+  <div class="list">
+    <a class="item" href="{{ url_for('admin_fields') }}">إضافة حقول</a>
+    <a class="item" href="{{ url_for('admin_courses') }}">إضافة كورسات</a>
+    <a class="item" href="{{ url_for('admin_lessons') }}">إضافة دروس</a>
+    <a class="item" href="{{ url_for('admin_docs') }}">رفع ملفات</a>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}{{ course.title }}{% endblock %}
+{% block content %}
+<div class="card">
+  <h1 class="h1">{{ course.title }}</h1>
+  <p class="muted">{{ course.description }}</p>
+
+  <h2 class="h2">الدروس</h2>
+  <div class="list">
+    {% for l in course.lessons %}
+      <a class="item" href="{{ url_for('lesson_page', lesson_id=l.id) }}">{{ l.title }}</a>
+    {% else %}
+      <div class="muted">لا يوجد دروس بعد</div>
+    {% endfor %}
+  </div>
+
+  <h2 class="h2">الملفات</h2>
+  <div class="list">
+    {% for d in course.docs %}
+      <a class="item" href="{{ url_for('download_file', filename=d.filename) }}">{{ d.display_name }}</a>
+    {% else %}
+      <div class="muted">لا يوجد ملفات بعد</div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

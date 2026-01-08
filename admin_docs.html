@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}الملفات{% endblock %}
+{% block content %}
+<div class="card">
+  <h1 class="h1">رفع ملف</h1>
+
+  <form method="post" class="form" enctype="multipart/form-data">
+    <label>الكورس</label>
+    <select name="course_id" required>
+      {% for c in courses %}
+        <option value="{{c.id}}">{{c.field.name}} — {{c.title}}</option>
+      {% endfor %}
+    </select>
+
+    <label>اسم يظهر للطلاب</label>
+    <input name="display_name" placeholder="مثال: ملزمة اليوم الأول PDF">
+
+    <label>الملف</label>
+    <input type="file" name="file" required>
+
+    <button class="btn" type="submit">رفع</button>
+  </form>
+</div>
+
+<div class="card">
+  <h2 class="h2">آخر الملفات</h2>
+  <div class="list">
+    {% for d in docs %}
+      <a class="item" href="{{ url_for('download_file', filename=d.filename) }}">
+        {{ d.display_name }} — ({{ d.course.title }})
+      </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}الدروس{% endblock %}
+{% block content %}
+<div class="card">
+  <h1 class="h1">إضافة درس</h1>
+
+  <form method="post" class="form">
+    <label>الكورس</label>
+    <select name="course_id" required>
+      {% for c in courses %}
+        <option value="{{c.id}}">{{c.field.name}} — {{c.title}}</option>
+      {% endfor %}
+    </select>
+
+    <label>عنوان الدرس</label>
+    <input name="title" required>
+
+    <label>محتوى الدرس (HTML)</label>
+    <textarea name="content_html" rows="10" placeholder="انسخ هنا محتوى شرحك..."></textarea>
+
+    <button class="btn" type="submit">إضافة</button>
+  </form>
+</div>
+
+<div class="card">
+  <h2 class="h2">آخر الدروس</h2>
+  <div class="list">
+    {% for l in lessons %}
+      <a class="item" href="{{ url_for('lesson_page', lesson_id=l.id) }}">
+        {{l.course.title}} — {{l.title}}
+      </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

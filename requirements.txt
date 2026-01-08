@@ -1,0 +1,25 @@
+btec_site/
+  app.py
+  config.py
+  requirements.txt
+  /instance/
+    app.db
+  /uploads/
+  /static/
+    /css/
+      main.css
+  /templates/
+    base.html
+    home.html
+    login.html
+    course.html
+    lesson.html
+    admin_dashboard.html
+    admin_fields.html
+    admin_courses.html
+    admin_lessons.html
+    admin_docs.html
+Flask==3.0.3
+Flask-Login==0.6.3
+Flask-SQLAlchemy==3.1.1
+Werkzeug==3.0.3

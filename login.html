@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}دخول{% endblock %}
+{% block content %}
+<div class="card form-card">
+  <h1 class="h1">تسجيل الدخول</h1>
+  <form method="post" class="form">
+    <label>اسم المستخدم</label>
+    <input name="username" required>
+
+    <label>كلمة المرور</label>
+    <input name="password" type="password" required>
+
+    <button class="btn" type="submit">دخول</button>
+    <div class="muted">افتراضيًا بعد initdb: admin / admin12345</div>
+  </form>
+</div>
+{% endblock %}

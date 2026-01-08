@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}الكورسات{% endblock %}
+{% block content %}
+<div class="card">
+  <h1 class="h1">إضافة كورس</h1>
+
+  <form method="post" class="form">
+    <label>الحقل</label>
+    <select name="field_id" required>
+      {% for f in fields %}
+        <option value="{{f.id}}">{{f.name}}</option>
+      {% endfor %}
+    </select>
+
+    <label>عنوان الكورس</label>
+    <input name="title" required>
+
+    <label>وصف مختصر</label>
+    <textarea name="description" rows="3"></textarea>
+
+    <button class="btn" type="submit">إضافة</button>
+  </form>
+</div>
+
+<div class="card">
+  <h2 class="h2">آخر الكورسات</h2>
+  <div class="list">
+    {% for c in courses %}
+      <a class="item" href="{{ url_for('course_page', course_id=c.id) }}">
+        {{c.field.name}} — {{c.title}}
+      </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}الرئيسية{% endblock %}
+{% block content %}
+<h1 class="h1">الحقول</h1>
+
+<div class="grid">
+  {% for field in fields %}
+    <div class="card">
+      <h2 class="h2">{{ field.name }}</h2>
+      <div class="list">
+        {% for c in field.courses %}
+          <a class="item" href="{{ url_for('course_page', course_id=c.id) }}">{{ c.title }}</a>
+        {% else %}
+          <div class="muted">لا يوجد كورسات بعد</div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
